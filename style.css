@@ -50,8 +50,10 @@ main {
 
 .right-column {
     order: 1;
-    background-color: blue;
+    background-color: #FAFAFA;
     text-align: center;
+    min-width: 90px;
+    max-width: 90px;
 }
 
 /*Customização de perfil*/
@@ -193,4 +195,66 @@ main {
 .button .icon {
     width: 14px;
     height: 16px;
+}
+
+
+/*----------MENU DIREITO-----------*/
+
+.circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #F0F0F6;
+    margin-bottom: 10px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle .tooltip {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.circle .tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.circle:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.circle:hover {
+    background-color: #FFB400;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    height: 100vh;
+    gap: 20px;
 }
