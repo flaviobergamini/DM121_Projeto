@@ -27,7 +27,8 @@ footer {
     flex: 1;
 }
 
-.left-column, .right-column {
+.left-column,
+.right-column {
     background-color: white;
     padding: 1em;
     width: 20%;
@@ -80,7 +81,8 @@ main {
     border-radius: 50%;
 }
 
-.profile-name, .profile-profession {
+.profile-name,
+.profile-profession {
     top: 231px;
     left: 77px;
     font-family: Arial, sans-serif;
@@ -95,19 +97,19 @@ main {
 .profile-social-icons {
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     gap: 10px;
 }
 
 .icon {
-    width: 24px; 
-    height: 24px; 
+    width: 24px;
+    height: 24px;
 }
 
 .profile-informations {
     display: flex;
     justify-content: space-between;
-    align-items: center; 
+    align-items: center;
     gap: 10px;
 }
 
@@ -118,7 +120,8 @@ main {
     color: #2B2B2B;
 }
 
-.profile-value-info, .profile-value-info-green {
+.profile-value-info,
+.profile-value-info-green {
     text-align: end;
     font-size: 15px;
     color: #2B2B2B;
@@ -138,11 +141,11 @@ main {
 }
 
 .progress-bar {
-    height: 5px; 
+    height: 5px;
     background-color: #FFB400;
     border-radius: 5px;
-    width: 0; 
-    transition: width 0.3s; 
+    width: 0;
+    transition: width 0.3s;
 }
 
 .skills-key-info {
@@ -161,13 +164,15 @@ main {
 }
 
 /* Habilidades extras*/
-.extra-skills {
+.extra-skills,
+.plan-features {
     display: flex;
     align-items: center;
     gap: 5px;
 }
 
-.extra-skills-text {
+.extra-skills-text,
+.plan-features-text {
     font-size: 15px;
     color: #767676;
 }
@@ -178,8 +183,8 @@ main {
     align-items: center;
     justify-content: space-between;
     background-color: #FFB400;
-    color: #2B2B2B; 
-    border: none; 
+    color: #2B2B2B;
+    border: none;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 0;
@@ -254,7 +259,95 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     height: 100vh;
     gap: 20px;
+}
+
+/*----------CORPO DO SITE-----------*/
+/*Meus serviços*/
+.square-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.square-grid {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.square,
+.rectangle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 210px;
+    height: 145px;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.square svg {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.square h3 {
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #2B2B2B;
+}
+
+.square p,
+.subtitle {
+    font-size: 14px;
+    color: #767676;
+}
+
+.order-now {
+    text-decoration: none;
+    color: #FFB400;
+    cursor: pointer;
+    font-size: 12px;
+    transition: color 0.3s ease;
+}
+
+.order-now:active {
+    color: #ff8800;
+}
+
+.main-title {
+    font-size: 32px;
+    color: #2B2B2B;
+}
+
+/*Price Plans*/
+
+.rectangle {
+    width: 210px;
+    height: 600px;
+}
+
+.price {
+    font-size: 32px;
+    color: #2B2B2B;
+    font-weight: bold;
+}
+
+.hour {
+    font-size: 15px;
+    color: #2B2B2B;
+}
+
+.plan-features-container {
+    align-items: start;
+    justify-items: start;
 }
