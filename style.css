@@ -1,5 +1,6 @@
 body {
-    font-family: Arial, sans-serif;
+    /*font-family: Arial, sans-serif;*/
+    font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
@@ -106,14 +107,16 @@ main {
     height: 24px;
 }
 
-.profile-informations {
+.profile-informations,
+.education-informations {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
 }
 
-.profile-key-info {
+.profile-key-info,
+.education-info-yellow {
     background-color: #FFB400;
     text-align: start;
     font-size: 15px;
@@ -121,7 +124,8 @@ main {
 }
 
 .profile-value-info,
-.profile-value-info-green {
+.profile-value-info-green,
+.education-info {
     text-align: end;
     font-size: 15px;
     color: #2B2B2B;
@@ -282,7 +286,8 @@ main {
 }
 
 .square,
-.rectangle {
+.rectangle,
+.square-recommendation {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -333,7 +338,7 @@ main {
 
 .rectangle {
     width: 210px;
-    height: 600px;
+    height: 617px;
 }
 
 .price {
@@ -350,4 +355,166 @@ main {
 .plan-features-container {
     align-items: start;
     justify-items: start;
+}
+
+.order-now-button,
+.order-now-button-yellow {
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    color: #2B2B2B;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.order-now-button-yellow {
+    background-color: #FFB400;
+}
+
+.yellow-bar,
+.white-bar {
+    background-color: #FFB400;
+    color: #2B2B2B;
+    padding: 6px 0;
+    font-size: 15px;
+    text-align: center;
+    width: 250px;
+    box-sizing: border-box;
+    bottom: unset;
+}
+
+.white-bar {
+    background-color: white;
+    height: 20px;
+}
+
+/*RECOMMENDATIONS*/
+.stars {
+    color: #FFB400;
+    font-size: 25px;
+    width: 100%;
+}
+
+.recommendation-container {
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    gap: 20px;
+}
+
+.profile-recommendation {
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    gap: 10px;
+    text-align: left;
+}
+
+.profile-pic-recommendation {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.profile-text-recommendation {
+    font-size: 14px;
+    color: #555;
+}
+
+.square-recommendation {
+    height: 250px;
+    text-align: left;
+    justify-items: start;
+}
+
+.title-recommendation {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #2B2B2B;
+    text-align: left;
+    width: 100%;
+}
+
+.text-recommendation {
+    font-size: 12px;
+    color: #2B2B2B;
+    margin: 10px 0;
+    text-align: left;
+}
+
+.profile-recommendation-info {
+    text-align: left;
+}
+
+.carousel-dots {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #FFB400;
+    border-radius: 50%;
+}
+
+/*EDUCATION*/
+
+.education-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 800px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    height: 150px;
+    align-items: center;
+    width: 800px;
+    margin: 0 auto;
+}
+
+.column-education-extended,
+.column-education {
+    text-align: left;
+    padding-left: 60px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.column-education {
+    width: 25%;
+    text-align: start;
+    padding-left: 30px;
+    align-self: start;
+}
+
+.education-title {
+    font-size: 15px;
+    text-align: left;
+}
+
+.education-text {
+    font-size: 14px;
+    color: #555;
+}
+
+.education-info-yellow {
+    color: white;
+    font-size: 13px;
+}
+
+.education-info {
+    font-size: 13px;
 }
