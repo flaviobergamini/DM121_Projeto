@@ -99,7 +99,7 @@ main {
     order: 1;
     background-color: white;
     text-align: center;
-    min-width: 90px;
+    min-width: 50px;
     max-width: 90px; 
 } 
 
