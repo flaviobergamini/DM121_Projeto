@@ -14,7 +14,7 @@ header {
 
 .header-svg {
     z-index: -1;
-    width: 800px; 
+    width: 800px;
 }
 
 .header-container, .header-content {
@@ -28,7 +28,7 @@ header {
     top: 20%;
     transform: translateX(-70%);
     z-index: 1;
-    width: 500px; 
+    width: 500px;
 }
 
 .highlight {
@@ -84,11 +84,12 @@ main {
     padding: 1em;
     text-align: center;
     background-color: #F0F0F6;
+    margin-right: 150px;
 }
 
 .left-column {
     order: -1;
-    background-color: #FFFFFF;
+    background-color: white;
     text-align: center;
     min-width: 150px;
     max-width: 250px;
@@ -97,12 +98,15 @@ main {
 
 .right-column {
     order: 1;
-    background-color: #FAFAFA;
+    background-color: white;
     text-align: center;
     min-width: 90px;
-    max-width: 90px;
-    max-height: 500px;
-}
+    max-width: 90px; 
+    position: fixed; 
+    right: 0;      
+    top: 0;          
+    height: 100%;    
+} 
 
 /*Customização de perfil*/
 .profile-container {
@@ -173,7 +177,7 @@ main {
 .profile-value-info-green,
 .education-info {
     text-align: end;
-    font-size: 15px;
+    font-size: 13px;
     color: #2B2B2B;
 }
 
@@ -674,24 +678,18 @@ main {
 
 .form-column,
 .form-column-data {
-    width: 60%; 
+    width: 60%;
     justify-content: left;
     align-items: left;
     text-align: left;
     justify-items: center;
-    padding-right: 10px;
-}
-
-.form-column {
-    background-color: white;
+    padding: 10px;
 }
 
 .form-column-data {
     flex-direction: column;
     width: 40%;
     gap: 20px;
-    padding-right: -10px;
-    padding: 10px;
 }
 
 form {
@@ -709,6 +707,7 @@ form input[type="email"],
 form textarea {
     width: 100%;
     padding: 8px;
+    padding-right: 0px;
     background-color: #F0F0F6;
     margin-bottom: 15px;
     border: 0px;
@@ -775,4 +774,86 @@ form textarea {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+}
+
+
+/*MODAL PARA AS IMAGENS*/
+.gallery-image {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.gallery-image:hover {
+    transform: scale(1.1);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+}
+
+.modal-content, #caption {  
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*utils*/
+.redirect-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    transition: background-color 0.3s;
 }
